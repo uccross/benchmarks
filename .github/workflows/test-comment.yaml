@@ -19,6 +19,6 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             Build output
-            ${{ steps.build.outputs.build-log }}
+            $(date '+%Y-%m-%d')
             ![Result](res.png)
             ![Test Image](https://github.com/ImageGlass/sample-images/blob/master/Samples/JPG/memory_leak/254c3574-7622-11e6-9585-2c8800776cfe.jpg)
