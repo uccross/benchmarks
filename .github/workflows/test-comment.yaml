@@ -20,6 +20,8 @@ jobs:
           body: |
             Build output
             $(date '+%Y-%m-%d')
-            ${{ github.sha }} 
-            ![Result](/${{ github.sha }}/res.png)
+            ${{ env.DATE }} 
+            ![Result](https://github.com/uccross/skyhookdm-benchmarks/blob/main/benchmarks-result/2021-07-30/f092457dd67b9567dd693765c8a4ad9ea180fc61/dataset-selectivity-1-column-parquet.json)
             ![Test Image](https://github.com/ImageGlass/sample-images/blob/master/Samples/JPG/memory_leak/254c3574-7622-11e6-9585-2c8800776cfe.jpg)
+          env:
+            DATE: $(date '+%Y-%m-%d')
