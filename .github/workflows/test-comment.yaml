@@ -23,7 +23,7 @@ jobs:
           pip install python-decouple
           python3 test.py
         env:
-          COMMIT_SHA=${{ github.sha }}
+          COMMIT_SHA=${{ GITHUB_TOKEN }}
 
       - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v1
