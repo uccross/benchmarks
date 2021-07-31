@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-       
+
       - name: Setup Python
         uses: actions/setup-python@v2              
 
@@ -20,6 +20,7 @@ jobs:
         run: |
           echo "DATE=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
           echo "COMMIT_SHA=${{ github.sha }}" >> $GITHUB_ENV
+          pip install python-decouple
           python3 test.py
 
       - name: Create or update comment
