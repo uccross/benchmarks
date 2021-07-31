@@ -19,11 +19,9 @@ jobs:
       - name: Setup Pyarrow with Skyhook
         run: |
           echo "DATE=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
-          # echo "COMMIT_SHA=${{ github.sha }}" >> $GITHUB_ENV
+          echo "COMMIT_SHA=${{ github.sha }}" >> .env
           pip install python-decouple
           python3 test.py
-        env:
-          COMMIT_SHA=${{ github.token }}
 
       - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v1
