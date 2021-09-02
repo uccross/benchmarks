@@ -82,8 +82,8 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: uccross/skyhookdm-arrow
           body: | 
-            ## Benchmark results of ${{ github.sha }}
-            ### Column Plot:
+            ### Latecny benchmarks for commit ${{ github.sha }}
+            #### Column Selectivity:
             ![Plot](https://raw.githubusercontent.com/uccross/skyhookdm-benchmarks/main/benchmarks-result/${{ env.CURRENT_DATE }}/${{ github.sha }}/column-result.png)
-            ### Row Plot:
+            #### Row Selectivity:
             ![Plot](https://raw.githubusercontent.com/uccross/skyhookdm-benchmarks/main/benchmarks-result/${{ env.CURRENT_DATE }}/${{ github.sha }}/row-result.png)
