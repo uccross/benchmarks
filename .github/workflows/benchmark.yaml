@@ -47,6 +47,7 @@ jobs:
           cd benchmarks/
           git clone https://github.com/uccross/skyhookdm-benchmarks.git
           cd skyhookdm-benchmarks
+          rm -rf benchmarks-result/${{ env.CURRENT_DATE }}
           mkdir -p benchmarks-result/${{ env.CURRENT_DATE }}
           mkdir benchmarks-result/${{ env.CURRENT_DATE }}/${{ github.sha }} 
           cd ..  
